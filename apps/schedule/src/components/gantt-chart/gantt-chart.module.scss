@@ -1,0 +1,98 @@
+.gantt-chart {
+  display: grid;
+  grid-template-columns: 150px minmax(0, 1fr);
+  border: 2px solid #e7e6e6;
+  border-radius: 8px;
+  padding: 8px;
+}
+
+.pivot-column__header {
+  display: flex;
+  height: 32px;
+}
+
+.gantt-chart__pivot-column {
+  width: 150px;
+  border-right: 2px solid #b9b9b9;
+}
+
+.gantt-chart__header-date {
+  display: flex;
+  height: 32px;
+}
+
+.gantt-chart__header {
+  display: flex;
+  height: 32px;
+}
+
+.gantt-chart__body {
+  overflow-x: auto;
+  padding-bottom: 8px;
+}
+
+.time {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.bar {
+  border-radius: 16px;
+  background-color: #3f3067;
+}
+
+.pivot-row {
+  height: 32px;
+  padding-inline: 8px;
+  align-content: center;
+  border-top: 2px solid #e7e6e6;
+}
+
+.date {
+  flex: 1;
+  align-content: center;
+  text-align: center;
+  border-right: 2px solid #b9b9b9;
+}
+
+.table-row {
+  height: 32px;
+  background-color: transparent;
+  display: grid;
+  padding-block: 6px;
+  border-top: 2px solid #e7e6e6;
+  position: relative;
+}
+
+.table-lines {
+  position: absolute;
+  height: 100%;
+  display: flex;
+}
+
+.line {
+  border-right: 1px dashed #e7e6e6;
+  flex-shrink: 0;
+}
+
+.gantt-chart__table {
+  position: relative;
+  overflow-x: hidden;
+}
+
+.status-success {
+  background-color: #306730;
+}
+
+.status-pending {
+  background-color: #305167;
+}
+
+.status-warn {
+  background-color: #675730;
+}
+
+.status-error {
+  background-color: #673030;
+}

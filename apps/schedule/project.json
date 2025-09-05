@@ -1,0 +1,11 @@
+{
+  "root": "apps/schedule",
+  "targets": {
+    "dev": {
+      "command": "vite"
+    },
+    "build": {
+      "command": "tsc -p tsconfig.lib.json"
+    }
+  }
+}

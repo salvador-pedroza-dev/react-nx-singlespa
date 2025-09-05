@@ -4,7 +4,10 @@
   "files": [],
   "references": [
     {
-      "path": "./apps/nx-vite"
+      "path": "./apps/schedule"
+    },
+    {
+      "path": "./apps/root"
     }
   ]
 }
