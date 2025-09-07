@@ -1,5 +1,5 @@
 {
-  "name": "@nx-vite/schedule",
+  "name": "@rns/schedule",
   "version": "0.0.1",
   "private": true,
   "dependencies": {

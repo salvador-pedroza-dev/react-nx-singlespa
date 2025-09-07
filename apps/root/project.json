@@ -2,10 +2,7 @@
   "root": "apps/root",
   "targets": {
     "dev": {
-      "command": "vite --port 9000"
-    },
-    "build": {
-      "command": "tsc -p tsconfig.lib.json"
+      "command": "vite"
     }
   }
 }

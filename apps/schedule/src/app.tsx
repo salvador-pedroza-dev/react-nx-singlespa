@@ -1,11 +1,6 @@
 import { Dashboard } from '@/views/dashboard';
-import './styles.scss';
+import { PageLayout } from '@rns/components';
 
 export function App(props: { name: string }) {
-  return (
-    <section>
-      <h1> Schedule </h1>
-      <Dashboard />
-    </section>
-  );
+  return <PageLayout children={<Dashboard />} />;
 }
