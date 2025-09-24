@@ -1,0 +1,15 @@
+@import 'tailwindcss';
+@source '../../../libs/components';
+@source '../../dashboard';
+@source '../../schedule';
+
+@theme {
+  --color-primary: #0b62a1;
+  --color-secondary: #8fd88a;
+  --color-background: #f4f4f4;
+  --color-surface: #000;
+  --color-outline: #cbcbcb;
+  --color-nav: #0b62a1;
+  --font-display: 'Roboto', 'sans-serif';
+  --breakpoint-3xl: 120rem;
+}

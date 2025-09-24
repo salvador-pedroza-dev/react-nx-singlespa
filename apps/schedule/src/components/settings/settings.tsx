@@ -1,26 +1,19 @@
-import { DemoContainer } from '@mui/x-date-pickers/internals/demo';
-import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs';
+import { AdapterMoment } from '@mui/x-date-pickers/AdapterMoment';
 import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
 import { DatePicker } from '@mui/x-date-pickers/DatePicker';
-import { useState } from 'react';
-import Box from '@mui/material/Box';
-import { Dayjs } from 'dayjs';
+import { useSchedule } from '@/store';
 
 export function Settings() {
-  const [startDate, setStartDate] = useState<Dayjs | null>(null);
-  const [endDate, setEndDate] = useState<Dayjs | null>(null);
+  const { startDate, endDate, setStartDate, setEndDate } = useSchedule();
   return (
-    <Box display="flex" gap={2}>
-      <LocalizationProvider dateAdapter={AdapterDayjs}>
-        <DemoContainer components={['DatePicker']}>
-          <DatePicker label="Start" value={startDate} onChange={setStartDate} />
-        </DemoContainer>
+    <div className="mb-5 flex gap-2">
+      <LocalizationProvider dateAdapter={AdapterMoment}>
+        <DatePicker label="Start" value={startDate} onChange={setStartDate} />
       </LocalizationProvider>
-      <LocalizationProvider dateAdapter={AdapterDayjs}>
-        <DemoContainer components={['DatePicker']}>
-          <DatePicker label="End" value={endDate} onChange={setEndDate} />
-        </DemoContainer>
+
+      <LocalizationProvider dateAdapter={AdapterMoment}>
+        <DatePicker label="End" value={endDate} onChange={setEndDate} />
       </LocalizationProvider>
-    </Box>
+    </div>
   );
 }

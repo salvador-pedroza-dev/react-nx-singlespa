@@ -170,17 +170,22 @@ export const dat = [
   },
 ];
 
-export function getData(startDate: string, endDate: string) {
-  const sDate = moment(startDate);
+export function getData(
+  startDate: moment.Moment | null,
+  endDate: moment.Moment | null
+) {
+  if (!startDate || !endDate) {
+    return { data: [], dateList: [] };
+  }
   const data: Data[] = [];
   const dateList = [];
 
-  while (sDate.diff(endDate, 'days') !== 0) {
-    dateList.push(moment(sDate.format()));
-    sDate.add(1, 'days');
+  while (startDate.diff(endDate, 'days') !== 0) {
+    dateList.push(moment(startDate.format()));
+    startDate.add(1, 'days');
   }
 
-  dateList.push(moment(sDate.format()));
+  dateList.push(moment(startDate.format()));
 
   for (const i of dat) {
     const bars = [];

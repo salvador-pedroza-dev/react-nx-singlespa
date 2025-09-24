@@ -5,6 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Root Config</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
+      rel="stylesheet"
+    />
     <meta
       http-equiv="Content-Security-Policy"
       content="default-src 'self' https: localhost:*; script-src 'unsafe-inline' 'unsafe-eval' https: localhost:*; connect-src https: localhost:* ws://localhost:*; style-src 'unsafe-inline' https:; object-src 'none';"
@@ -49,18 +53,19 @@
     <script type="importmap">
       {
         "imports": {
-          "@salvador/root-config": "http://localhost:4200/src/main.ts",
-          "@salvador/schedule": "http://localhost:4201/src/main.ts"
+          "@rns/root-config": "http://localhost:4200/src/main.ts",
+          "@rns/schedule": "http://localhost:4201/src/main.ts",
+          "@rns/dashboard": "http://localhost:4203/src/main.ts"
         }
       }
     </script>
     <% } %>
   </head>
-  <body style="background-color: rgb(244, 244, 244)">
+  <body class="bg-background">
     <noscript> You need to enable JavaScript to run this app. </noscript>
     <% if (isDev) { %>
     <script>
-      import('@salvador/root-config');
+      import('@rns/root-config');
     </script>
     <% } %>
   </body>

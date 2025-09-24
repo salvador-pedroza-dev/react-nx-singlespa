@@ -2,6 +2,7 @@
   "name": "@rns/root",
   "private": true,
   "version": "0.0.0",
+  "type": "module",
   "dependencies": {
     "path": "^0.12.7",
     "single-spa": "^6.0.3",

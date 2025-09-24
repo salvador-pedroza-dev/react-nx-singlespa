@@ -1,3 +1,4 @@
+import './style.css';
 import { registerApplication, start } from 'single-spa';
 
 async function loadApp(appName: string) {
@@ -12,9 +13,16 @@ async function loadApp(appName: string) {
 }
 
 registerApplication({
-  name: '@single-spa/schedule',
-  app: async () => await loadApp('@salvador/schedule'),
-  activeWhen: ['/'],
+  name: '@rns/schedule',
+  app: async () => await loadApp('@rns/schedule'),
+  activeWhen: ['/schedule'],
+});
+
+registerApplication({
+  name: '@rns/dashboard',
+  app: async () => await loadApp('@rns/dashboard'),
+  activeWhen: (location) =>
+    location.pathname === '/' || location.pathname === '/dashboard',
 });
 
 start({

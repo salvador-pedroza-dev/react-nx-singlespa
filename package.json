@@ -12,12 +12,15 @@
     "@mui/icons-material": "^7.3.2",
     "@mui/material": "^7.3.2",
     "@mui/x-date-pickers": "^8.11.1",
+    "@tailwindcss/vite": "^4.1.13",
     "mobx": "^6.13.7",
     "react": "19.0.0",
     "react-dom": "19.0.0",
     "react-router-dom": "6.29.0",
     "single-spa-react": "^6.0.2",
-    "vite-plugin-externalize-dependencies": "^1.0.1"
+    "tailwindcss": "^4.1.13",
+    "vite-plugin-externalize-dependencies": "^1.0.1",
+    "zustand": "^5.0.8"
   },
   "devDependencies": {
     "@babel/core": "^7.14.5",
