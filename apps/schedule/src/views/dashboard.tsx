@@ -1,34 +1,39 @@
 import { GanttChart } from '@/components/gantt-chart/gantt-chart';
 import { Settings } from '@/components/settings/settings';
-import { getData } from '@/api';
 import { useSchedule } from '@/store';
+import { useEffect } from 'react';
 
 export function Dashboard() {
-  const subHeaders: string[] = [];
-  const dateToday = new Date();
-  const nextWeek = new Date();
-  nextWeek.setDate(dateToday.getDate() + 7);
-  const { startDate, endDate } = useSchedule();
+  const events = useSchedule((state) => state.events);
+  const getEvents = useSchedule((state) => state.getEvents);
 
-  const data = getData(startDate, endDate);
-  const headers: string[] = data.dateList.map((d) => d.format('L'));
+  useEffect(() => {
+    getEvents();
+  }, []);
 
-  for (let i = 1; i < 25; i++) {
-    subHeaders.push(i + ':00');
+  function ganttChart() {
+    if (events) {
+      return (
+        <GanttChart
+          headers={events.headers}
+          subHeaders={events.subHeaders}
+          columnSize={100}
+          colUnits={4}
+          data={events.data}
+        />
+      );
+    }
   }
 
   return (
-    <>
-      <Settings />
-      <GanttChart
-        headers={headers}
-        subHeaders={subHeaders}
-        columnSize={100}
-        colUnits={4}
-        data={data.data}
-        from={dateToday.toISOString()}
-        to={nextWeek.toISOString()}
-      />
-    </>
+    <div className="flex flex-col gap-3 h-full">
+      <h1 className="text-3xl">Schedule</h1>
+      <div className="border border-outline-variant bg-surface p-3 rounded-md">
+        <Settings />
+      </div>
+      <div className="border border-outline-variant bg-surface p-3 rounded-md flex-1">
+        {ganttChart()}
+      </div>
+    </div>
   );
 }

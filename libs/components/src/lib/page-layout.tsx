@@ -1,16 +1,12 @@
 import { useState, ReactNode, useEffect } from 'react';
 import './page-layout.scss';
-
-const drawerWidth = 240;
-
 interface Props {
   children: ReactNode;
   title?: string;
   showAppBar?: boolean;
 }
 
-export function PageLayout({ children, title, showAppBar }: Props) {
-  //const theme = useTheme();
+export function PageLayout({ children }: Props) {
   const [route, setRoute] = useState('');
 
   useEffect(() => {
@@ -29,18 +25,18 @@ export function PageLayout({ children, title, showAppBar }: Props) {
       icon: 'schedule',
       label: 'Schedule',
     },
-    /*     {
+    {
       route: 'signature',
       icon: 'signature',
       label: 'Signature',
-    }, */
+    },
   ];
 
-  const selected = 'bg-gray-600 rounded-lg';
+  const selected = 'bg-primary-container rounded-lg';
 
   return (
     <div id="page-layout" className="h-dvh grid grid-cols-(--layout-grid-cols)">
-      <aside className="border-r border-r-gray-300 bg-neutral-700 p-2">
+      <aside className="border-r border-outline-variant bg-surface p-2 bg">
         <ul className="flex gap-1  flex-col">
           {routes.map((r) => (
             <li
@@ -52,7 +48,7 @@ export function PageLayout({ children, title, showAppBar }: Props) {
                 href={`/${r.route}`}
                 onClick={() => setRoute(r.route)}
               >
-                <i className="material-symbols-outlined text-white">{r.icon}</i>
+                <i className="material-symbols-outlined">{r.icon}</i>
               </a>
             </li>
           ))}

@@ -25,6 +25,12 @@ registerApplication({
     location.pathname === '/' || location.pathname === '/dashboard',
 });
 
+registerApplication({
+  name: '@rns/signature',
+  app: async () => await loadApp('@rns/signature'),
+  activeWhen: ['/signature'],
+});
+
 start({
   urlRerouteOnly: true,
 });

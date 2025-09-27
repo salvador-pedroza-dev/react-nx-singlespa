@@ -7,8 +7,6 @@ interface Props {
   columnSize: number;
   colUnits: number;
   data: Data[];
-  from: string;
-  to: string;
 }
 
 export function GanttChart({
@@ -17,8 +15,6 @@ export function GanttChart({
   columnSize,
   colUnits,
   data,
-  from,
-  to,
 }: Props) {
   const gantSize =
     subHeaders.length * columnSize * headers.length + columnSize / 2;

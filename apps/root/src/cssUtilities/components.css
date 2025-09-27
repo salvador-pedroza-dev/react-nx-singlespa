@@ -1,0 +1,25 @@
+.card {
+  background-color: var(--color-surface);
+  border-radius: 0.375rem;
+  padding: 0.75rem;
+}
+
+button {
+  text-transform: uppercase;
+  padding-inline: 1rem;
+  border-radius: 0.375rem;
+  height: 2.5rem;
+  letter-spacing: 0.025em;
+  display: flex;
+  align-items: center;
+}
+
+.btn-primary {
+  background-color: var(--color-primary);
+  color: var(--color-on-primary);
+}
+
+.btn-outline {
+  border: 1px solid var(--color-outline);
+  color: var(--color-on-surface);
+}

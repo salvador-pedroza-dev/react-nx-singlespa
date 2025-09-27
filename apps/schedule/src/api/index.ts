@@ -3,7 +3,7 @@ import moment from 'moment';
 
 export const dat = [
   {
-    truckId: 'truck 1',
+    eventId: 'Event 1',
     deliveries: [
       {
         start: 1,
@@ -26,7 +26,7 @@ export const dat = [
     ],
   },
   {
-    truckId: 'truck 2',
+    eventId: 'Event 2',
     deliveries: [
       {
         start: 0,
@@ -43,7 +43,7 @@ export const dat = [
     ],
   },
   {
-    truckId: 'truck 3',
+    eventId: 'Event 3',
     deliveries: [
       {
         start: 3,
@@ -66,7 +66,7 @@ export const dat = [
     ],
   },
   {
-    truckId: 'truck 4',
+    eventId: 'Event 4',
     deliveries: [
       {
         start: 2,
@@ -89,7 +89,7 @@ export const dat = [
     ],
   },
   {
-    truckId: 'truck 5',
+    eventId: 'Event 5',
     deliveries: [
       {
         start: 1,
@@ -112,7 +112,7 @@ export const dat = [
     ],
   },
   {
-    truckId: 'truck 6',
+    eventId: 'Event 6',
     deliveries: [
       {
         start: 0,
@@ -135,7 +135,7 @@ export const dat = [
     ],
   },
   {
-    truckId: 'truck 7',
+    eventId: 'Event 7',
     deliveries: [
       {
         start: 3,
@@ -152,7 +152,7 @@ export const dat = [
     ],
   },
   {
-    truckId: 'truck 8',
+    eventId: 'Event 8',
     deliveries: [
       {
         start: 2,
@@ -202,7 +202,7 @@ export function getData(
       }
     }
     data.push({
-      pivot: i.truckId,
+      pivot: i.eventId,
       bars,
     });
   }
