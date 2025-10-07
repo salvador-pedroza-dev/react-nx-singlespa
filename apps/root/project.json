@@ -1,8 +1,0 @@
-{
-  "root": "apps/root",
-  "targets": {
-    "dev": {
-      "command": "vite"
-    }
-  }
-}

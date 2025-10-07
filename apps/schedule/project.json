@@ -1,8 +1,0 @@
-{
-  "root": "apps/schedule",
-  "targets": {
-    "dev": {
-      "command": "vite"
-    }
-  }
-}

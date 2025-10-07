@@ -1,10 +1,12 @@
 import { Data } from '@/types';
 import moment from 'moment';
+import { buildings } from '../consts';
 
 export const dat = [
   {
-    eventId: 'Event 1',
-    deliveries: [
+    buildingId: buildings[0].id,
+    buildingName: buildings[0].name,
+    events: [
       {
         start: 1,
         end: 5,
@@ -14,7 +16,7 @@ export const dat = [
       {
         start: 8,
         end: 13,
-        info: 'deliveries of textiles to factory',
+        info: 'events of textiles to factory',
         status: 'warn',
       },
       {
@@ -26,8 +28,9 @@ export const dat = [
     ],
   },
   {
-    eventId: 'Event 2',
-    deliveries: [
+    buildingId: buildings[1].id,
+    buildingName: buildings[1].name,
+    events: [
       {
         start: 0,
         end: 3,
@@ -43,8 +46,9 @@ export const dat = [
     ],
   },
   {
-    eventId: 'Event 3',
-    deliveries: [
+    buildingId: buildings[2].id,
+    buildingName: buildings[2].name,
+    events: [
       {
         start: 3,
         end: 7,
@@ -66,8 +70,9 @@ export const dat = [
     ],
   },
   {
-    eventId: 'Event 4',
-    deliveries: [
+    buildingId: buildings[3].id,
+    buildingName: buildings[3].name,
+    events: [
       {
         start: 2,
         end: 4,
@@ -89,8 +94,9 @@ export const dat = [
     ],
   },
   {
-    eventId: 'Event 5',
-    deliveries: [
+    buildingId: buildings[4].id,
+    buildingName: buildings[4].name,
+    events: [
       {
         start: 1,
         end: 5,
@@ -112,8 +118,9 @@ export const dat = [
     ],
   },
   {
-    eventId: 'Event 6',
-    deliveries: [
+    buildingId: buildings[5].id,
+    buildingName: buildings[5].name,
+    events: [
       {
         start: 0,
         end: 3,
@@ -135,8 +142,9 @@ export const dat = [
     ],
   },
   {
-    eventId: 'Event 7',
-    deliveries: [
+    buildingId: buildings[6].id,
+    buildingName: buildings[6].name,
+    events: [
       {
         start: 3,
         end: 7,
@@ -152,8 +160,9 @@ export const dat = [
     ],
   },
   {
-    eventId: 'Event 8',
-    deliveries: [
+    buildingId: buildings[7].id,
+    buildingName: buildings[7].name,
+    events: [
       {
         start: 2,
         end: 4,
@@ -191,7 +200,7 @@ export function getData(
     const bars = [];
     for (let d = 0; d < dateList.length; d++) {
       const date = moment(dateList[d].format());
-      for (const j of i.deliveries) {
+      for (const j of i.events) {
         bars.push({
           ...j,
           start: j.start + 24 * d,
@@ -202,7 +211,7 @@ export function getData(
       }
     }
     data.push({
-      pivot: i.eventId,
+      pivot: i.buildingName,
       bars,
     });
   }

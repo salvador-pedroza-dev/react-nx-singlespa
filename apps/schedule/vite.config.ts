@@ -11,6 +11,7 @@ export default defineConfig(() => ({
   build: {
     outDir: './dist',
     emptyOutDir: true,
+    entryFile: 'src/main.ts',
     reportCompressedSize: true,
     commonjsOptions: {
       transformMixedEsModules: true,

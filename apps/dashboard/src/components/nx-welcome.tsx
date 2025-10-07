@@ -1,19 +1,12 @@
-/*
- * * * * * * * * * * * * * * * * * * * * * * * * * * * *
- This is a starter component and can be deleted.
- * * * * * * * * * * * * * * * * * * * * * * * * * * * *
- Delete this file and get started with your project!
- * * * * * * * * * * * * * * * * * * * * * * * * * * * *
- */
+import { useTranslation } from 'react-i18next';
+
 export function NxWelcome() {
+  const { t } = useTranslation('dashboard');
+
   return (
-    <>
-      <div style={{ textAlign: 'center' }}>
-        <h2 className="text-2xl font-bold text-green-600">
-          Welcome to the Dashboard!
-        </h2>
-        <h1 className="text-green-600">Vite + React + Tailwind</h1>
-      </div>
-    </>
+    <div className="flex flex-col gap-3 h-full">
+      <h1 className="text-3xl">{t('title')}</h1>
+      <div className="card border border-outline-variant flex-1"></div>
+    </div>
   );
 }

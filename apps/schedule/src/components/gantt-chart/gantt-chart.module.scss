@@ -1,6 +1,8 @@
+$row-height: 40px;
+
 .gantt-chart {
   display: grid;
-  grid-template-columns: 150px minmax(0, 1fr);
+  grid-template-columns: 180px minmax(0, 1fr);
   /*   border: 2px solid #e7e6e6;
   border-radius: 8px;
   padding: 8px; */
@@ -8,22 +10,21 @@
 
 .pivot-column__header {
   display: flex;
-  height: 32px;
+  height: $row-height;
 }
 
 .gantt-chart__pivot-column {
-  width: 150px;
   border-right: 2px solid #b9b9b9;
 }
 
 .gantt-chart__header-date {
   display: flex;
-  height: 32px;
+  height: $row-height;
 }
 
 .gantt-chart__header {
   display: flex;
-  height: 32px;
+  height: $row-height;
 }
 
 .gantt-chart__body {
@@ -43,7 +44,7 @@
 }
 
 .pivot-row {
-  height: 32px;
+  height: $row-height;
   padding-inline: 8px;
   align-content: center;
   border-top: 2px solid #e7e6e6;
@@ -57,10 +58,10 @@
 }
 
 .table-row {
-  height: 32px;
+  height: $row-height;
   background-color: transparent;
   display: grid;
-  padding-block: 6px;
+  padding-block: 8px;
   border-top: 2px solid #e7e6e6;
   position: relative;
 }

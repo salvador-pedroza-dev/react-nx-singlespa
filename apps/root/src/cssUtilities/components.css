@@ -1,7 +1,7 @@
 .card {
   background-color: var(--color-surface);
   border-radius: 0.375rem;
-  padding: 0.75rem;
+  padding: 1.5rem;
 }
 
 button {
@@ -10,8 +10,16 @@ button {
   border-radius: 0.375rem;
   height: 2.5rem;
   letter-spacing: 0.025em;
-  display: flex;
+  display: inline-flex;
   align-items: center;
+}
+
+.outline-input {
+  border: 1px solid var(--color-outline);
+  border-radius: 0.25rem;
+  height: 3.5rem;
+  padding: .75rem;
+  width: 20rem;
 }
 
 .btn-primary {

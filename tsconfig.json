@@ -17,6 +17,9 @@
     },
     {
       "path": "./apps/signature"
+    },
+    {
+      "path": "./libs/i18n"
     }
   ]
 }

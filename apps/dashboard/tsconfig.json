@@ -25,6 +25,9 @@
   "include": ["src/**/*.js", "src/**/*.jsx", "src/**/*.ts", "src/**/*.tsx"],
   "references": [
     {
+      "path": "../../libs/i18n"
+    },
+    {
       "path": "../../libs/components"
     }
   ]
