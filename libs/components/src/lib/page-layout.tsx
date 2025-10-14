@@ -37,7 +37,7 @@ export function PageLayout({ children }: Props) {
   return (
     <div id="page-layout" className="h-dvh grid grid-cols-(--layout-grid-cols)">
       <aside
-        className="border-r border-outline-variant bg-surface p-2 bg"
+        className=" bg-surface p-2 bg"
         role="navigation"
         aria-label="Sidebar navigation"
       >

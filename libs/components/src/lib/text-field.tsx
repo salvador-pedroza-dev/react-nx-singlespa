@@ -31,7 +31,7 @@ export const TextField: React.FC<TextFieldProps> = ({
   const helperId = helperText ? `${id}-helper` : undefined;
 
   return (
-    <div className="mb-6 w-full">
+    <div className=" w-full">
       <div className="relative">
         <input
           id={inputId}
